@@ -135,20 +135,6 @@
 			remoteGlobalIDString = AAB0DBF7193416CF00DE28CD;
 			remoteInfo = FreeMusic;
 		};
-		B64BE4401AAB466500589675 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B64BE43B1AAB466500589675 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 14E40ABBCF62A940157F8DBF;
-			remoteInfo = Pods;
-		};
-		F97160E91C8AE12D0028C769 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B64BE43B1AAB466500589675 /* Pods.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 38B7D6E2783AC6222AE1A71B68358BAD;
-			remoteInfo = AFNetworking;
-		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -180,8 +166,6 @@
 		AAB0DCF71934268300DE28CD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		AAB36C7E19371C2E00DB2F50 /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
 		AAD0BB0D193F153D006154EE /* NetworkExtension.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NetworkExtension.framework; path = System/Library/Frameworks/NetworkExtension.framework; sourceTree = SDKROOT; };
-		B64BE4391AAB464300589675 /* FreeMusic.xcworkspace */ = {isa = PBXFileReference; lastKnownFileType = wrapper.workspace; path = FreeMusic.xcworkspace; sourceTree = "<group>"; };
-		B64BE43B1AAB466500589675 /* Pods.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Pods.xcodeproj; path = Pods/Pods.xcodeproj; sourceTree = "<group>"; };
 		B6AC6CF41C7372EE00FB9399 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B6AC6CF51C7372EE00FB9399 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		B6AC6CF81C7372EE00FB9399 /* id3_parser.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = id3_parser.cpp; sourceTree = "<group>"; };
@@ -435,8 +419,6 @@
 		AAB0DBFA193416CF00DE28CD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B64BE43B1AAB466500589675 /* Pods.xcodeproj */,
-				B64BE4391AAB464300589675 /* FreeMusic.xcworkspace */,
 				AA8CB6D01946F74900C5214F /* QuartzCore.framework */,
 				AAD0BB0D193F153D006154EE /* NetworkExtension.framework */,
 				AAB36C7E19371C2E00DB2F50 /* MediaPlayer.framework */,
@@ -479,15 +461,6 @@
 				AAB0DC1D193416D000DE28CD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		B64BE43C1AAB466500589675 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				F97160EA1C8AE12D0028C769 /* libAFNetworking.a */,
-				B64BE4411AAB466500589675 /* libPods.a */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		B6AC6CF31C7372EE00FB9399 /* FreeMusic */ = {
@@ -970,12 +943,6 @@
 			mainGroup = AAB0DBEF193416CF00DE28CD;
 			productRefGroup = AAB0DBF9193416CF00DE28CD /* Products */;
 			projectDirPath = "";
-			projectReferences = (
-				{
-					ProductGroup = B64BE43C1AAB466500589675 /* Products */;
-					ProjectRef = B64BE43B1AAB466500589675 /* Pods.xcodeproj */;
-				},
-			);
 			projectRoot = "";
 			targets = (
 				AAB0DBF7193416CF00DE28CD /* FreeMusic */,
@@ -983,23 +950,6 @@
 			);
 		};
 /* End PBXProject section */
-
-/* Begin PBXReferenceProxy section */
-		B64BE4411AAB466500589675 /* libPods.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libPods.a;
-			remoteRef = B64BE4401AAB466500589675 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		F97160EA1C8AE12D0028C769 /* libAFNetworking.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libAFNetworking.a;
-			remoteRef = F97160E91C8AE12D0028C769 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AAB0DBF6193416CF00DE28CD /* Resources */ = {
