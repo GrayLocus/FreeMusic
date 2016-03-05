@@ -26,7 +26,6 @@
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
-    NSLog(@"%s", __func__);
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         // Custom initialization
@@ -81,12 +80,10 @@
 
 -(void)getSongsList
 {
-    NSLog(@"%s", __func__);
     MCDataEngine * network = [MCDataEngine new];
     [network getSingerSongListWith:_singerModel.ting_uid
                                   :song_total
              WithCompletionHandler:^(FMSongList *songList) {
-        NSLog(@"%@ : %s", self.class, __func__);
         array = songList.songLists;
         [_tableView reloadData];
         [ProgressHUD dismiss];
@@ -142,7 +139,6 @@
 
 -(void)loadMore
 {
-    NSLog(@"%s", __func__);
     if (isLoadingMore) {
         [footerView.activeView startAnimating];
         song_total+=20;
@@ -154,7 +150,6 @@
 
 -(void)loadMoreData
 {
-    NSLog(@"%s", __func__);
     MCDataEngine * network = [MCDataEngine new];
     [network getSingerSongListWith:_singerModel.ting_uid :song_total WithCompletionHandler:^(FMSongList *songList) {
         
@@ -187,14 +182,10 @@
 #pragma mark UIScrollViewDelegate
 - (void) scrollViewDidScroll:(UIScrollView *)scrollView
 {
-    NSLog(@"%s", __func__);
     if (isLoadingMore && !isCanLoadMore) {
         CGFloat scrollPosition = scrollView.contentSize.height - scrollView.frame.size.height - scrollView.contentOffset.y;
-        NSLog(@"%d", __LINE__);
 
         if (scrollPosition < DEFAULT_HEIGHT_OFFSET) {
-            NSLog(@"%d", __LINE__);
-
             [self loadMore];
         }
     }
