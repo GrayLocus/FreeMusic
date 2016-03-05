@@ -11,7 +11,7 @@
 @interface FMTDMovieModel : NSObject
 @property (nonatomic,copy) NSString * title;
 @property (nonatomic,copy) NSString * tags;
-@property (nonatomic,copy) NSString * description;
+@property (nonatomic,copy) NSString * describeString;
 @property (nonatomic,copy) NSString * picUrl;
 @property (nonatomic,copy) NSString * picUrl__16__9;
 @property (nonatomic,copy) NSString * pubDate;
