@@ -26,7 +26,6 @@
 		AAB0DCF61934267900DE28CD /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB0DCF51934267900DE28CD /* Security.framework */; };
 		AAB0DCF81934268300DE28CD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB0DCF71934268300DE28CD /* MobileCoreServices.framework */; };
 		AAB36C7F19371C2E00DB2F50 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AAB36C7E19371C2E00DB2F50 /* MediaPlayer.framework */; };
-		B64BE4441AAB467B00589675 /* libPods-AFNetworking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B64BE4431AAB466500589675 /* libPods-AFNetworking.a */; };
 		B6AC6DCD1C7372EE00FB9399 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC6CF51C7372EE00FB9399 /* AppDelegate.m */; };
 		B6AC6DCE1C7372EE00FB9399 /* id3_parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B6AC6CF81C7372EE00FB9399 /* id3_parser.cpp */; };
 		B6AC6DCF1C7372EE00FB9399 /* AudioPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC6CFB1C7372EE00FB9399 /* AudioPlayer.m */; };
@@ -125,6 +124,7 @@
 		B6AC6E2C1C7372EF00FB9399 /* StyledTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC6DC81C7372EE00FB9399 /* StyledTableViewCell.m */; };
 		B6AC6E2D1C7372EF00FB9399 /* UIView+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC6DCA1C7372EE00FB9399 /* UIView+Additions.m */; };
 		B6AC6E2E1C7372EF00FB9399 /* ZZNavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = B6AC6DCC1C7372EE00FB9399 /* ZZNavigationView.m */; };
+		EE8A05EE49E2BD032C5B8326 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEC00EDF4866D642CDF220DB /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -142,12 +142,12 @@
 			remoteGlobalIDString = 14E40ABBCF62A940157F8DBF;
 			remoteInfo = Pods;
 		};
-		B64BE4421AAB466500589675 /* PBXContainerItemProxy */ = {
+		F97160E91C8AE12D0028C769 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B64BE43B1AAB466500589675 /* Pods.xcodeproj */;
 			proxyType = 2;
-			remoteGlobalIDString = 8B5F68B8EA1A891FB40C0629;
-			remoteInfo = "Pods-AFNetworking";
+			remoteGlobalIDString = 38B7D6E2783AC6222AE1A71B68358BAD;
+			remoteInfo = AFNetworking;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -381,7 +381,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B64BE4441AAB467B00589675 /* libPods-AFNetworking.a in Frameworks */,
 				AA8CB6D11946F74900C5214F /* QuartzCore.framework in Frameworks */,
 				AAB36C7F19371C2E00DB2F50 /* MediaPlayer.framework in Frameworks */,
 				AAB0DCF81934268300DE28CD /* MobileCoreServices.framework in Frameworks */,
@@ -396,6 +395,7 @@
 				AAB0DBFE193416CF00DE28CD /* CoreGraphics.framework in Frameworks */,
 				AAB0DC00193416CF00DE28CD /* UIKit.framework in Frameworks */,
 				AAB0DBFC193416CF00DE28CD /* Foundation.framework in Frameworks */,
+				EE8A05EE49E2BD032C5B8326 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,8 +484,8 @@
 		B64BE43C1AAB466500589675 /* Products */ = {
 			isa = PBXGroup;
 			children = (
+				F97160EA1C8AE12D0028C769 /* libAFNetworking.a */,
 				B64BE4411AAB466500589675 /* libPods.a */,
-				B64BE4431AAB466500589675 /* libPods-AFNetworking.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -909,6 +909,7 @@
 				AAB0DBF5193416CF00DE28CD /* Frameworks */,
 				AAB0DBF6193416CF00DE28CD /* Resources */,
 				311D575913878F82E98538A9 /* Copy Pods Resources */,
+				A78BBF67BD005EEE4BA3EF6B /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -991,11 +992,11 @@
 			remoteRef = B64BE4401AAB466500589675 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		B64BE4431AAB466500589675 /* libPods-AFNetworking.a */ = {
+		F97160EA1C8AE12D0028C769 /* libAFNetworking.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
-			path = "libPods-AFNetworking.a";
-			remoteRef = B64BE4421AAB466500589675 /* PBXContainerItemProxy */;
+			path = libAFNetworking.a;
+			remoteRef = F97160E91C8AE12D0028C769 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1055,6 +1056,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A78BBF67BD005EEE4BA3EF6B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
